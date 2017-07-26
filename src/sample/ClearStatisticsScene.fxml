@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.102-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ClearStatisticsScene">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: #545e75;">
+         <children>
+            <Text layoutX="136.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CLEAR STATISTICS?" textAlignment="CENTER">
+               <font>
+                  <Font name="Loma" size="32.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #9ebce3;">
+         <children>
+            <Button fx:id="mainMenuButton" layoutX="225.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#mainMenuPressed" prefHeight="65.0" prefWidth="152.0" style="-fx-base: ffe066; -fx-background-radius: 20;" text="RETURN" />
+            <Button fx:id="yesButton" layoutX="125.0" layoutY="59.0" mnemonicParsing="false" onMouseClicked="#yesPressed" prefHeight="51.0" prefWidth="115.0" style="-fx-base: ffe066; -fx-background-radius: 20;" text="YES" />
+            <Button fx:id="noButton" layoutX="354.0" layoutY="59.0" mnemonicParsing="false" onMouseClicked="#noPressed" prefHeight="51.0" prefWidth="115.0" style="-fx-base: ffe066; -fx-background-radius: 20;" text="NO" />
+            <Label fx:id="noLabel" layoutX="132.0" layoutY="147.0" prefHeight="15.0" prefWidth="379.0" text="NO STATS DELETED. CLICK TO RETURN TO MAIN MENU. . ." textFill="WHITE" />
+            <Label fx:id="yesLabel" layoutX="108.0" layoutY="147.0" text="ALL STATS DELETED. CLICK TO RETURN TO MAIN MENU. . ." textFill="WHITE" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>

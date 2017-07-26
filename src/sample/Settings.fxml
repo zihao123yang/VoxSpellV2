@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #545e75;" xmlns="http://javafx.com/javafx/8.0.102-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SettingsController">
+   <children>
+      <ImageView fx:id="backgroundView" fitHeight="800.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <InnerShadow />
+         </effect></ImageView>
+      <HBox alignment="CENTER_LEFT" layoutY="202.0" prefHeight="100.0" prefWidth="1200.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Voice Select:" wrappingWidth="270.35546875">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="200.0" />
+               </HBox.margin>
+            </Text>
+            <ComboBox fx:id="selectVoice" onAction="#voiceChanging" prefHeight="31.0" prefWidth="267.0" style="-fx-base: ffe066; -fx-background-radius: 10;">
+               <HBox.margin>
+                  <Insets left="300.0" />
+               </HBox.margin>
+            </ComboBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="-2.0" layoutY="304.0" prefHeight="100.0" prefWidth="1200.0" style="-fx-background-color: #545e75;">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Voice Speed:" wrappingWidth="270.849609375">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="200.0" />
+               </HBox.margin>
+            </Text>
+            <ToggleButton fx:id="speed0_5" mnemonicParsing="false" onAction="#speed0_5" prefHeight="30.0" prefWidth="60.0" style="-fx-base: ffe066; -fx-background-radius: 50;" text="0.5x">
+               <HBox.margin>
+                  <Insets left="290.0" />
+               </HBox.margin>
+            </ToggleButton>
+            <ToggleButton fx:id="speed0_8" mnemonicParsing="false" onAction="#speed0_8" prefHeight="30.0" prefWidth="60.0" style="-fx-base: ffe066; -fx-background-radius: 50;" text="0.8x">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ToggleButton>
+            <ToggleButton fx:id="speed1_0" mnemonicParsing="false" onAction="#speed1_0" prefHeight="30.0" prefWidth="60.0" style="-fx-base: ffe066; -fx-background-radius: 50;" text="1.0x">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ToggleButton>
+            <ToggleButton fx:id="speed1_5" mnemonicParsing="false" onAction="#speed1_5" prefHeight="30.0" prefWidth="60.0" style="-fx-base: ffe066; -fx-background-radius: 50;" text="1.5x">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ToggleButton>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="-1.0" layoutY="408.0" prefHeight="100.0" prefWidth="1200.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Change Word list:" wrappingWidth="270.4951171875">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="200.0" />
+               </HBox.margin>
+            </Text>
+            <Button fx:id="chooseWordList" mnemonicParsing="false" onAction="#chooseWordListPressed" prefHeight="50.0" prefWidth="250.0" style="-fx-base: ffe066; -fx-background-radius: 20;" text="SELECT WORD LIST">
+               <HBox.margin>
+                  <Insets left="310.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Text layoutX="499.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Text>
+      <HBox alignment="CENTER_LEFT" layoutX="1.0" layoutY="524.0" prefHeight="100.0" prefWidth="1200.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Clear Statistics:" wrappingWidth="270.1318359375">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="200.0" />
+               </HBox.margin>
+            </Text>
+            <Button mnemonicParsing="false" onAction="#clearStats" prefHeight="50.0" prefWidth="250.0" style="-fx-base: ffe066; -fx-background-radius: 20;" text="CLEAR STATISTICS">
+               <HBox.margin>
+                  <Insets left="310.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Button layoutX="977.0" layoutY="718.0" mnemonicParsing="false" onAction="#mainMenu" prefHeight="50.0" prefWidth="200.0" style="-fx-base: ffe066; -fx-background-radius: 20;" text="MAIN MENU" />
+      <Button layoutX="1111.0" layoutY="30.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-base: ffe066; -fx-background-radius: 10;">
+         <graphic>
+            <ImageView fx:id="helpView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+      </Button>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</Pane>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #545e75;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SpellingQuizController">
+   <children>
+      <ImageView fx:id="backgroundView" fitHeight="800.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <InnerShadow />
+         </effect></ImageView>
+      <Text fx:id="_levelText" layoutX="505.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LEVEL 1" wrappingWidth="200.0">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+      <Pane layoutX="-3.0" layoutY="436.0" prefHeight="371.0" prefWidth="1200.0">
+         <children>
+            <TextField fx:id="_inputField" alignment="CENTER" layoutX="125.0" layoutY="72.0" onAction="#submitButtonPressed" onMouseClicked="#textFieldClicked" prefHeight="95.0" prefWidth="664.0" style="-fx-background-color: #9ebce3;">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <effect>
+                  <Lighting bumpInput="$null">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></TextField>
+            <Text layoutX="130.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PLEASE ENTER WORD BELOW:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Button fx:id="_submitButton" layoutX="837.0" layoutY="69.0" mnemonicParsing="false" onAction="#submitButtonPressed" prefHeight="47.0" prefWidth="230.0" style="-fx-base: ffe066; -fx-background-radius: 20;" text="SUBMIT ANSWER" />
+            <Button layoutX="836.0" layoutY="124.0" mnemonicParsing="false" onAction="#repeatWordPressed" prefHeight="47.0" prefWidth="230.0" style="-fx-base: ffe066; -fx-background-radius: 20;" text="REPEAT WORD" />
+            <Text fx:id="_testAccuracyText" layoutX="233.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TEST ACCURRACY: 78%">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="_levelAccuracyText" layoutX="570.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LEVEL ACCURRACY: 90%">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Button layoutX="985.0" layoutY="290.0" mnemonicParsing="false" onAction="#mainMenuPressed" prefHeight="50.0" prefWidth="200.0" style="-fx-base: ffe066; -fx-background-radius: 20;" text="MAIN MENU" />
+            <ComboBox fx:id="selectVoice" layoutX="410.0" layoutY="186.0" onAction="#voiceChanging" prefHeight="34.0" prefWidth="278.0" style="-fx-base: ffe066; -fx-background-radius: 10;" />
+            <Text layoutX="236.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHANGE VOICE:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="_score" layoutX="232.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SCORE: 0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="_highscore" layoutX="570.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HIGH SCORE:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Button fx:id="_mute" layoutX="1027.0" layoutY="34.0" mnemonicParsing="false" onAction="#mute" prefHeight="60.0" prefWidth="60.0" style="-fx-base: ffe066; -fx-background-radius: 10;" />
+      <HBox fx:id="progressBox" alignment="CENTER" layoutX="41.0" layoutY="265.0" prefHeight="95.0" prefWidth="1120.0" />
+      <Button layoutX="1116.0" layoutY="34.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-base: ffe066; -fx-background-radius: 10;">
+         <graphic>
+            <ImageView fx:id="helpView" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/question.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</Pane>

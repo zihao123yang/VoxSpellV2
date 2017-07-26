@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #545e75;" xmlns="http://javafx.com/javafx/8.0.102-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LevelFailedController">
+   <children>
+      <ImageView fx:id="backgroundView" fitHeight="800.0" fitWidth="1200.0" opacity="0.84" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../Downloads/LogoMakr(11).png" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <Button layoutX="500.0" layoutY="635.0" mnemonicParsing="false" onAction="#returnToMainMenu" prefHeight="50.0" prefWidth="200.0" style="-fx-base: ffe066; -fx-background-radius: 20;" text="MAIN MENU" textAlignment="CENTER" />
+      <Button layoutX="500.0" layoutY="561.0" mnemonicParsing="false" onAction="#retryLevel" prefHeight="50.0" prefWidth="200.0" style="-fx-base: ffe066; -fx-background-radius: 20;" text="RETRY" textAlignment="CENTER" />
+      <Text layoutX="283.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOU DID NOT PASS THE LEVEL" textAlignment="CENTER">
+         <font>
+            <Font name="Loma" size="40.0" />
+         </font>
+      </Text>
+      <Pane layoutX="3.0" layoutY="187.0" prefHeight="341.0" prefWidth="1200.0">
+         <children>
+            <ImageView fx:id="highScoreView" fitHeight="150.0" fitWidth="200.0" layoutX="525.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/highscore.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="congratsText" fill="WHITE" layoutX="282.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONGRATULATIONS! NEW HIGH SCORE!!!">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fx:id="scoreText" fill="WHITE" layoutX="476.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SCORE: " textAlignment="CENTER">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</Pane>

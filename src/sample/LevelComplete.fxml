@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="back" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #0077BE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LevelCompletedController">
+   <center>
+      <VBox prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #545e75;" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="LEVEL COMPLETE">
+               <font>
+                  <Font name="Loma" size="40.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="420.0" top="40.0" />
+               </VBox.margin>
+            </Text>
+            <Pane prefHeight="304.0" prefWidth="1200.0">
+               <children>
+                  <Text fx:id="congratsText" fill="WHITE" layoutX="283.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONGRATULATIONS! NEW HIGH SCORE!!">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="highScoreView" fitHeight="150.0" fitWidth="200.0" layoutX="517.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/highscore.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="232.0" prefWidth="1200.0">
+               <children>
+                  <Button layoutX="180.0" layoutY="150.0" mnemonicParsing="false" onAction="#returnToMainMenu" prefHeight="60.0" prefWidth="200.0" style="-fx-base: ffe066; -fx-background-radius: 20;" text="MAIN MENU" textFill="#030303">
+                     <font>
+                        <Font name="Loma" size="14.0" />
+                     </font></Button>
+                  <Button layoutX="500.0" layoutY="150.0" mnemonicParsing="false" onAction="#retryLevel" prefHeight="60.0" prefWidth="200.0" style="-fx-base: ffe066; -fx-background-radius: 20;" text="RE-TRY LEVEL">
+                     <font>
+                        <Font name="Loma" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="nextLevel" layoutX="835.0" layoutY="150.0" mnemonicParsing="false" onAction="#nextLevel" prefHeight="60.0" prefWidth="200.0" style="-fx-base: ffe066; -fx-background-radius: 20;" text="NEXT LEVEL" textFill="#0a0a0a">
+                     <font>
+                        <Font name="Loma" size="14.0" />
+                     </font></Button>
+                  <Text fx:id="scoreText" fill="WHITE" layoutX="475.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SCORE:">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Pane>
+            <Button mnemonicParsing="false" onAction="#playVideo" prefHeight="60.0" prefWidth="200.0" style="-fx-base: ffe066; -fx-background-radius: 20;" text="WATCH VIDEO!">
+               <VBox.margin>
+                  <Insets left="500.0" top="50.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>
